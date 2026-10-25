@@ -6,7 +6,12 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --check ."
+    "format": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*": "prettier --check --ignore-unknown"
   },
   "repository": {
     "type": "git",
@@ -22,6 +27,8 @@
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.9.10"
   }
 }
