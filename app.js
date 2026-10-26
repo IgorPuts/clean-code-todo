@@ -1,14 +1,16 @@
 const newTaskInput = document.getElementById('new-task');
-const addButton = document.getElementsByTagName('button')[0];
+const addButton = document.querySelector('#addTaskButton');
 const incompleteTasksList = document.getElementById('incompleteTasks');
 const completedTasksList = document.getElementById('completed-tasks');
 
 const createNewTaskElement = function (taskString) {
   const taskItem = document.createElement('li');
+
   const checkBox = document.createElement('input');
   const label = document.createElement('label');
   const taskEditInput = document.createElement('input');
   const editButton = document.createElement('button');
+
   const deleteButton = document.createElement('button');
   const deleteIcon = document.createElement('img');
 
