@@ -39,7 +39,7 @@ const createNewTaskElement = function (taskString) {
 const addTask = function () {
   const taskText = newTaskInput.value.trim();
   if (!taskText) return;
-  const taskItem = createNewTaskElement(newTaskInput.value);
+  const taskItem = createNewTaskElement(taskText);
 
   incompleteTasksList.appendChild(taskItem);
   attachTaskEventListeners(taskItem);
