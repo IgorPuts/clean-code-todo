@@ -5,7 +5,6 @@ const completedTasksList = document.getElementById('completed-tasks');
 
 const createNewTaskElement = function (taskString) {
   const taskItem = document.createElement('li');
-
   const checkBox = document.createElement('input');
   const label = document.createElement('label');
   const taskEditInput = document.createElement('input');
@@ -79,10 +78,10 @@ const moveTask = function (event) {
 
 addButton.addEventListener('click', addTask);
 
-const attachTaskEventListeners = function (tasktaskItem) {
-  const checkBox = tasktaskItem.querySelector('input[type=checkbox]');
-  const editButton = tasktaskItem.querySelector('button.edit');
-  const deleteButton = tasktaskItem.querySelector('button.delete');
+const attachTaskEventListeners = function (taskItem) {
+  const checkBox = taskItem.querySelector('input[type=checkbox]');
+  const editButton = taskItem.querySelector('button.edit');
+  const deleteButton = taskItem.querySelector('button.delete');
 
   editButton.onclick = editTask;
   deleteButton.onclick = deleteTask;
